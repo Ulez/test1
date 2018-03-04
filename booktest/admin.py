@@ -2,5 +2,7 @@ from django.contrib import admin
 
 # Register your models here.
 from .models import *
-admin.site.register(BookInfo)
+class BookInfoAdmin(admin.ModelAdmin):
+    list_display = ['id','btitle','bpub_date']#定义显示的内容；
+admin.site.register(BookInfo,BookInfoAdmin) #规定每一行的显示内容；
 admin.site.register(HeroInfo)
