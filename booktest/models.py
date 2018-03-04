@@ -11,4 +11,6 @@ class HeroInfo(models.Model):
     hgender=models.BooleanField()
     hcontent=models.CharField(max_length=1000)
     hbook=models.ForeignKey('BookInfo')
+    def __str__(self):
+        return self.hname.encode('utf-8')
 
