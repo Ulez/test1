@@ -6,3 +6,8 @@ from .models import *
 def index(request):
     context={'list':BookInfo.objects.all()}
     return render(request,'booktest/index.html',context)
+def show(request,id):
+    date=BookInfo.objects.get(pk=id).bpub_date
+    title = BookInfo.objects.get(pk=id).btitle
+    context={"title":title,'date':date}
+    return render(request,'booktest/show.html',context)

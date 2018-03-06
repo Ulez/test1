@@ -8,7 +8,7 @@
 <h1>hello world ,.,.,</h1>
 <h1>{{ list }}</h1>
 {% for book in list %}
-    <li>{{ book.btitle }}</li>
+    <li><a href="{{ book.id }}">{{ book.btitle }}</a></li>
     <li>{{ book.bpub_date }}</li>
 {% endfor %}
 
