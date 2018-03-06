@@ -6,6 +6,11 @@
 </head>
 <body>
 <h1>hello world ,.,.,</h1>
-<h1>{{title}}</h1>
+<h1>{{ list }}</h1>
+{% for book in list %}
+    <li>{{ book.btitle }}</li>
+    <li>{{ book.bpub_date }}</li>
+{% endfor %}
+
 </body>
 </html>
